@@ -1,1 +1,40 @@
 body { background: white; }
+
+/* ===== Responsive images and gallery grid =====
+   Please keep this block: it makes images fit phone screens
+   and builds the gallery grid required by the brief. */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+}
+
+.gallery-grid figure {
+    margin: 0;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Phone */
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}

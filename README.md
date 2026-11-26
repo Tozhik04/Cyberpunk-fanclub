@@ -10,7 +10,7 @@ Open `index.html` in a browser to view the site.
 | File | Page |
 |---|---|
 | `index.html` | Home: welcome, purpose of the club, recent updates, links to all pages |
-| `about-us.html` | About Us: group members (photos, names, student IDs, profiles) |
+| `about-us.html` | About Us: group members (photos, names, student IDs, profiles), in progress |
 | `characters.html` | Characters from Cyberpunk: Edgerunners |
 | `Background.html` | Background: the world of Night City |
 | `events.html` | Upcoming events (table with dates, times, locations, descriptions) |
@@ -24,7 +24,6 @@ Open `index.html` in a browser to view the site.
 ```
 css/
   style.css            main style sheet used by every page
-  style-draft.css      draft styles (not linked)
   images/              gallery and event images
     characters/        character photos used on characters.html
 ```
