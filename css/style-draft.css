@@ -1,0 +1,297 @@
+/* Cyberpunk Fan Club - shared style sheet
+   Colour scheme (4 colours only):
+   dark #0b0d14 | yellow #fcee0a | cyan #00e5ff | white #f5f5f5 */
+
+/* ---------- General ---------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #0b0d14;
+    color: #f5f5f5;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3 {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    line-height: 1.2;
+}
+
+h1, h2 {
+    color: #fcee0a;
+}
+
+h1 {
+    font-size: 40px;
+    margin: 0 0 16px;
+}
+
+h2 {
+    font-size: 28px;
+    margin: 0 0 16px;
+}
+
+h3 {
+    color: #00e5ff;
+    font-size: 20px;
+    margin: 0 0 8px;
+}
+
+a {
+    color: #00e5ff;
+}
+
+a:focus {
+    outline: 2px solid #fcee0a;
+    outline-offset: 2px;
+}
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 24px 20px 48px;
+}
+
+section {
+    margin-bottom: 48px;
+}
+
+/* ---------- Header and navigation ---------- */
+header {
+    background-color: #0b0d14;
+    border-bottom: 3px solid #fcee0a;
+    padding: 16px 20px;
+    text-align: center;
+}
+
+.logo {
+    color: #fcee0a;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    margin: 12px 0 0;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+    padding: 8px 14px;
+    color: #f5f5f5;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #00e5ff;
+}
+
+nav a.active {
+    background-color: #fcee0a;
+    color: #0b0d14;
+}
+
+/* ---------- Banner and button ---------- */
+.banner {
+    position: relative;
+    border: 1px solid #00e5ff;
+}
+
+.banner img {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+}
+
+.banner-text {
+    position: absolute;
+    left: 32px;
+    bottom: 32px;
+    max-width: 560px;
+    padding: 24px;
+    background-color: #0b0d14;
+    border-left: 5px solid #fcee0a;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 24px;
+    background-color: #fcee0a;
+    color: #0b0d14;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #00e5ff;
+}
+
+/* ---------- Grid and cards ---------- */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.two-columns {
+    grid-template-columns: 1fr 1fr;
+}
+
+.card {
+    border: 1px solid #00e5ff;
+    padding: 20px;
+}
+
+a.card {
+    color: #f5f5f5;
+    text-decoration: none;
+}
+
+a.card:hover {
+    border-color: #fcee0a;
+}
+
+.card p {
+    margin: 0;
+}
+
+.card .date {
+    color: #fcee0a;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* ---------- About Us: group members ---------- */
+.member {
+    display: flex;
+    gap: 20px;
+}
+
+.member img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 2px solid #fcee0a;
+    flex-shrink: 0;
+}
+
+.member .student-id {
+    color: #fcee0a;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* ---------- Join Us: form ---------- */
+.form-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.form-table td {
+    width: 50%;
+    padding: 12px;
+    border: 1px solid #00e5ff;
+    vertical-align: top;
+}
+
+.form-table input, .form-table select, .form-table textarea {
+    max-width: 100%;
+    padding: 8px;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.form-table input[type="text"], .form-table input[type="password"],
+.form-table input[type="email"], .form-table input[type="tel"],
+.form-table input[type="date"], .form-table select, .form-table textarea {
+    width: 100%;
+}
+
+.form-table .button {
+    padding: 10px 24px;
+    border: none;
+    cursor: pointer;
+}
+
+.form-table .button-cell {
+    text-align: center;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    border-top: 3px solid #fcee0a;
+    padding: 24px 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 4px 0;
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 900px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .two-columns {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---------- Mobile phone ---------- */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    nav a {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .banner img {
+        height: 220px;
+    }
+
+    .banner-text {
+        position: static;
+        max-width: none;
+    }
+
+    .member {
+        flex-direction: column;
+    }
+
+    .form-table td {
+        display: block;
+        width: 100%;
+    }
+}
